@@ -3,21 +3,24 @@ package GettersSetters;
 import java.util.Scanner;
 
 public class MainGetSet {
-    // public static void main(String[] args) {
-    //     Scanner scanner = new Scanner(System.in);
-    //     System.out.println("Informe o ano do carro");
-    //     int anoLido = 100; //scanner.nextInt();
 
-    //     Carro carro = new Carro();
-    //     carro.setAno(anoLido);
+    private Scanner scanner = new Scanner(System.in);
 
-    //     System.out.println("Ano lido: " + carro.getAno());
-    //     scanner.close();
+    public static void readCarData() {
+        Carro carro = new Carro();
 
+        System.out.println("Informe o ano do carro");
+        int anoLido = 100; // scanner.nextInt();
+        carro.setAno(anoLido);
 
-    // }
+        System.out.println("Ano lido: " + carro.getAno());
+        scanner.close();
+    }
 
     public static void main(String[] args) {
+
+        System.out.println("Informe o ano do carro");
+        // int anoLido = 100; //scanner.nextInt();
         OperacoesMatematicas om = new OperacoesMatematicas(1000, 2000);
         System.out.println("A soma é: " + om.soma());
 
