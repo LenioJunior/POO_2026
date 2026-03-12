@@ -7,8 +7,8 @@ public class OperacoesMatematicas {
         
     }
 
-    public OperacoesMatematicas(int numero1, int numero2){
-        this.numero1 = numero1;
+    public OperacoesMatematicas(int num1, int numero2){
+        numero1 = num1;
         this.numero2 = numero2;
     }
 
