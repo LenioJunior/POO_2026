@@ -1,4 +1,4 @@
-package Exercises;
+package Exercises.GettersAndSetters;
 
 import java.util.Scanner;
 

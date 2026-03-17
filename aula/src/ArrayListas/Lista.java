@@ -12,12 +12,49 @@ public class Lista {
      * Descobrir se um elemento existe na lista - indexOf(parametro)
      */
     private int tamanho;
+    private int tamanhoAtual;
 
-    private int[] elementos;
+    private Integer[] elementos;
 
     public Lista(int tamanho) {
-        elementos = new int[tamanho];
+        elementos = new Integer[tamanho];
         this.tamanho = tamanho;
+        tamanhoAtual = 0;
+    }
+
+    public int size(){
+        return tamanhoAtual;
+    }
+
+    public boolean add(int valor){
+        if (tamanhoAtual > tamanho)
+            return false;
+        
+        elementos[tamanhoAtual++] = valor;
+        return true;
+    }
+
+    public int indexOf(int valor){
+        for (int i = 0; i < tamanhoAtual; i++) {
+            if (elementos[i] == valor)
+                return i;
+        }
+        return -1;
+    }
+
+    public boolean remove(int valor){
+        int index = indexOf(valor);
+        if (index == -1)
+            return false;
+
+        for (int i = index; i < tamanhoAtual - 1; i++) {
+            elementos[i] = elementos[i + 1];
+        }
+
+        elementos[tamanhoAtual] = null;       
+
+        tamanhoAtual--;
+        return true;
     }
 
     public void listar(){

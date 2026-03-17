@@ -3,6 +3,7 @@ package Exercises;
 import java.util.Scanner;
 
 import Classes.Carro;
+import Exercises.TreinoParaProva.Exercicio1;
 
 public class ExercicioSala {
 
@@ -18,6 +19,8 @@ public class ExercicioSala {
 
         int opcao = 0;
         double percentual;
+
+        Exercicio1 h;
 
         do {
             System.out.println("Informe uma opção:");

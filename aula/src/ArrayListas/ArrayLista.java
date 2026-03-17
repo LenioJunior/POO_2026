@@ -3,13 +3,15 @@ package ArrayListas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ArrayListas {
+import ArrayListas.br.edu.ifsuldeminas.restaurante.Catraca;
+
+public class ArrayLista {
 
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //arrayList();
-        arrayNosso();
+       // arrayList();
+       // arrayNosso();
     }
 
     public static void arrayNosso(){
