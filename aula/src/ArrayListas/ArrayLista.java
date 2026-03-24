@@ -3,8 +3,6 @@ package ArrayListas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import ArrayListas.br.edu.ifsuldeminas.restaurante.Catraca;
-
 public class ArrayLista {
 
     private static Scanner sc = new Scanner(System.in);
@@ -25,9 +23,9 @@ public class ArrayLista {
             valor = sc.nextInt();
             arrayList.add(valor);
         } while (valor != -1);
-       
+
         for (int i = 0; i < arrayList.size(); i++) {
-            System.out.println(String.format("Valor %d Informado: %s", (i + 1), arrayList.get(i)));
+            System.out.println(String.format("Valor %d Informado: %s", (i + 1), arrayList.getAt(i)));
         }
         sc.close();
     }

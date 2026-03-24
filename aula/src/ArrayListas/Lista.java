@@ -57,6 +57,13 @@ public class Lista {
         return true;
     }
 
+    public int getAt(int index){        
+        if (index < 0 || index > tamanhoAtual - 1) {
+            return -1;
+        }
+        return elementos[index];
+    }
+
     public void listar(){
         for (int i = 0; i < tamanho; i++) {
             System.out.println(String.format("Elemento %d: %d", (i+1), elementos[i]));

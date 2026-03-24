@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainGetSet {
 
-    private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void readCarData() {
         Carro carro = new Carro();
