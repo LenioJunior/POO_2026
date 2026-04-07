@@ -1,0 +1,26 @@
+Classe Funcionario:
+    * Criar atributos:
+        - float salarioBase
+        - float bonus
+    * Alterar construtor para receber parâmetros criados
+    * Criar função:
+        - float calcularSalario() -> salarioBase + bonus
+
+Classe Repositor
+    * Sobrescrever função calcularSalario:
+        - float calcularSalario() -> (salarioBase + bonus) * 1.4
+        - Usar método da superclasse
+    * Alterar construtor para receber parâmetros necessários
+
+
+-----------------------------------------------------
+
+Depois de finalizar as tarefas acima, refatorar o código:
+
+Classe Repositor
+    * Adicionar o atributo valorIR:
+        - float valorIR
+    * Alterar construtor para receber o novo parâmetro
+    * Modificar a função calcularSalario:
+        - float calcularSalario() -> (salarioBase + bonus - valorIR) * 1.4
+        - Usar método da superclasse
