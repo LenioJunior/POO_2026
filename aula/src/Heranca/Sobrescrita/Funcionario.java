@@ -12,11 +12,16 @@ public class Funcionario {
         this.bonus = bonus;
     }
 
+    public double soma(){
+        return 0;
+    }
+
     public void exibirDados(){
         System.out.println("Idade: " + getIdade());
         System.out.println("Salario Base: " + getSalarioBase());
         System.out.println("Bonus: " + getBonus());
         System.out.println("Salário Calculado: " + calcularSalario());
+        System.out.println("----------------");
     }
 
     public float calcularSalario(){
