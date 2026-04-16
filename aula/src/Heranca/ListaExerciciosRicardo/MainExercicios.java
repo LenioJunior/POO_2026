@@ -24,7 +24,7 @@ public class MainExercicios {
         System.out.println("É igual figura com outro id: " + figura1.equals(figura3));
         System.out.println("É igual figura com mesmo id: " + figura1.equals(figura2));
 
-         ArrayList figuras = new ArrayList<>();
+         ArrayList<Figura> figuras = new ArrayList<Figura>();
          figuras.add(figura1);
          figuras.add(figura2);
     }
