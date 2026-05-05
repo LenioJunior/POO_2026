@@ -2,10 +2,15 @@ package Exercises.ArrayList.Ex1;
 
 import java.util.ArrayList;
 
+import ArrayListas.ArrayLista;
+import ArrayListas.LenioException;
+
 public class Album {
 
     private ArrayList<Figurinha> figurinhas;
     private String name;
+    ArrayLista aa;
+    LenioException l;
 
     public Album() {
         figurinhas = new ArrayList<>();

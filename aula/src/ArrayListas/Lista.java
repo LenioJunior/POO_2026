@@ -1,8 +1,10 @@
 package ArrayListas;
 
-public class Lista {
+import java.lang.reflect.Array;
+
+public class Lista<Tipo> {
     /*
-     * Armazenar uma lista de elementos do tipo inteiro
+     * Armazenar uma lista de elementos do tipo <Tipo>>
      * Construtor que recebe o tamanho da lista
      * Métodos:
      * Adicionar elemento - add(parametro)
@@ -14,10 +16,10 @@ public class Lista {
     private int tamanho;
     private int tamanhoAtual;
 
-    private Integer[] elementos;
+    private Tipo[] elementos;
 
-    public Lista(int tamanho) {
-        elementos = new Integer[tamanho];
+    public Lista(Class<Tipo> clazz, int tamanho) {
+        elementos = (Tipo[]) Array.newInstance(clazz, tamanho);
         this.tamanho = tamanho;
         tamanhoAtual = 0;
     }
@@ -26,7 +28,7 @@ public class Lista {
         return tamanhoAtual;
     }
 
-    public boolean add(int valor){
+    public boolean add(Tipo valor){
         if (tamanhoAtual > tamanho)
             return false;
         
@@ -34,7 +36,7 @@ public class Lista {
         return true;
     }
 
-    public int indexOf(int valor){
+    public int indexOf(Tipo valor){
         for (int i = 0; i < tamanhoAtual; i++) {
             if (elementos[i] == valor)
                 return i;
@@ -42,7 +44,7 @@ public class Lista {
         return -1;
     }
 
-    public boolean remove(int valor){
+    public boolean remove(Tipo valor){
         int index = indexOf(valor);
         if (index == -1)
             return false;
@@ -57,9 +59,19 @@ public class Lista {
         return true;
     }
 
-    public int getAt(int index){        
+    public Tipo getAt(int index) throws 
+        LenioException, DatabaseNotFoundException, Exception {        
         if (index < 0 || index > tamanhoAtual - 1) {
-            return -1;
+            // Exception
+            throw new Exception("The index was not found!");
+        }
+
+        if (index == 6){
+            throw new LenioException("Cannot use the number 6");
+        }
+
+        if (index == 7){
+            throw new DatabaseNotFoundException("The database doesn't exists");
         }
         return elementos[index];
     }
