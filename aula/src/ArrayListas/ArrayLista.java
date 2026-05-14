@@ -16,13 +16,13 @@ public class ArrayLista {
     }
 
     public static void arrayNosso() {
-        Lista<Integer> arrayList = new Lista<Integer>(4);
+        Lista<Integer> arrayList = new Lista<Integer>(Integer.class, 4);
         arrayList.add(3);
 
-        Lista<String> stringList = new Lista<>(4);
+        Lista<String> stringList = new Lista<>(String.class, 4);
         stringList.add("null");
 
-        Lista<Cliente> clienteList = new Lista<>(4);
+        Lista<Cliente> clienteList = new Lista<>(Cliente.class, 4);
         clienteList.add(null);
 
         Scanner sc = new Scanner(System.in);

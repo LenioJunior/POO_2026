@@ -18,6 +18,7 @@ public class Lista<Tipo> {
 
     private Tipo[] elementos;
 
+    @SuppressWarnings("unchecked")
     public Lista(Class<Tipo> clazz, int tamanho) {
         elementos = (Tipo[]) Array.newInstance(clazz, tamanho);
         this.tamanho = tamanho;
